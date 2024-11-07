@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ping Pong Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="playerForm">
+    <h2>Enter Player Names</h2>
+    <input type="text" id="player1Name" placeholder="Player 1 Name" required>
+    <input type="text" id="player2Name" placeholder="Player 2 Name" required>
+
+    <h3>Select Mode:</h3>
+    <label><input type="radio" name="gameMode" value="player-vs-player" checked> Player vs Player</label>
+    <label><input type="radio" name="gameMode" value="player-vs-computer"> Player vs Computer</label>
+
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <div id="gameContainer" style="display: none;">
+    <canvas id="pongCanvas" width="800" height="500"></canvas>
+  </div>
+
+  <div id="winnerPopup" class="popup" style="display: none;">
+    <div id="winnerMessage"></div>
+    <button onclick="restartGame()">Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
